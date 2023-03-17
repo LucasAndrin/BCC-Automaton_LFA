@@ -45,9 +45,7 @@ $string = trim($string);
                     $automaton = new Automaton($string);
                     $result = $automaton->test();
                     if (!$result) {
-                        ?>
-                        <span class="badge text-bg-danger">Error: Expressão inválida! Você não pode começar uma variável com um número.</span>
-                        <?php
+                        ?><span class="badge text-bg-danger">Error: Expressão inválida! Você não pode começar uma variável com um número.</span><?php
                     }
             ?>
                 <code class="rounded bg-dark text-white p-5">
