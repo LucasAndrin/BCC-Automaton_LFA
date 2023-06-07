@@ -158,7 +158,7 @@ class Automaton {
         $currentString = '';
         $currentState = 'q0';
 
-        foreach ($chars as $key => $char) {
+        foreach ($chars as $index => $char) {
             if (array_key_exists($char, $transitions[$currentState])) {
                 if ($char == ' ') {
                     if ($currentState == 'q1') {
@@ -187,7 +187,7 @@ class Automaton {
                 return false;
             }
 
-            if ($key == count($chars) - 1) {
+            if ($index == count($chars) - 1) {
                 if ($currentString == 'if') {
                     $this->setIf();
                 } else if ($currentString == 'for') {
